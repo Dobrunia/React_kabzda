@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import { OnOff } from "./components/OnOff/OnOff";
+import UncontroledAccordion from "./components/UncontroledAccordion/UncontroledAccordion";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Accordion titleValue={"Menu"} collapsed={false} />
       <OnOff />
       <OnOff />
-      <OnOff />
+      <UncontroledAccordion titleValue={"Menu"}/>
     </div>
   );
 }
