@@ -6,13 +6,13 @@ import UncontroledAccordion from "./components/UncontroledAccordion/UncontroledA
 
 function App() {
   return (
-    <div>
+    <div className={"App"}>
       <AddTitle />
       <Rating value={3} />
       <Accordion titleValue={"Menu"} collapsed={false} />
       <OnOff />
       <OnOff />
-      <UncontroledAccordion titleValue={"Menu"}/>
+      <UncontroledAccordion titleValue={"Menu"} />
     </div>
   );
 }

@@ -5,7 +5,6 @@ type AccordionPropsType = {
 };
 
 const btnStyle = {
-  width: "50px",
   height: "20px",
 };
 
@@ -14,13 +13,21 @@ function UncontroledAccordion(props: AccordionPropsType) {
   if (control === false) {
     return (
       <div>
-        <AccordionTitle title={props.titleValue} control={control} setControl={setControl} />
+        <AccordionTitle
+          title={props.titleValue}
+          control={control}
+          setControl={setControl}
+        />
       </div>
     );
   } else {
     return (
       <div>
-        <AccordionTitle title={props.titleValue} control={control} setControl={setControl} />
+        <AccordionTitle
+          title={props.titleValue}
+          control={control}
+          setControl={setControl}
+        />
         <AccordionBody />
       </div>
     );
@@ -29,7 +36,7 @@ function UncontroledAccordion(props: AccordionPropsType) {
 
 type AccordionTitlePropsType = {
   title: string;
-  control: boolean,
+  control: boolean;
   setControl: (arg: boolean) => void;
 };
 
@@ -38,7 +45,7 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     <>
       <h3>{props.title}</h3>
       <button style={btnStyle} onClick={() => props.setControl(!props.control)}>
-        show
+        show/hide
       </button>
     </>
   );
