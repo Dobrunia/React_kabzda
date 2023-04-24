@@ -43,10 +43,7 @@ type AccordionTitlePropsType = {
 function AccordionTitle(props: AccordionTitlePropsType) {
   return (
     <>
-      <h3>{props.title}</h3>
-      <button style={btnStyle} onClick={() => props.setControl(!props.control)}>
-        show/hide
-      </button>
+      <h3 onClick={() => props.setControl(!props.control)}>{props.title}</h3>
     </>
   );
 }
